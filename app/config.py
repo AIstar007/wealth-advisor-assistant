@@ -26,7 +26,7 @@ class Settings:
     log_level: str = os.getenv("LOG_LEVEL", "INFO").strip().upper()
     auto_approve: bool = _env_bool("AUTO_APPROVE", False)
     database_path: str = os.getenv("DATABASE_PATH", "data/wealth_advisor.db")
-    mock_crm_url: str = os.getenv("MOCK_CRM_URL", "http://127.0.0.1:8000/mock/crm")
+    mock_crm_url: str = os.getenv("MOCK_CRM_URL", "https://wealth-advisor-assistant-backend.onrender.com/mock/crm")
     crm_mode: str = os.getenv("CRM_MODE", "memory").strip().lower()
 
     # Azure OpenAI (primary runtime for this assignment)
