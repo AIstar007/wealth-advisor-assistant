@@ -48,31 +48,32 @@
 
 ```mermaid
 graph TD
-    A[👤 User - Browser] --> B[🖥️ Next.js / React Dashboard\nFinancial workspace + CopilotKit chat]
+    A["👤 User - Browser"] --> B["🖥️ Next.js / React Dashboard<br/>Financial workspace + CopilotKit chat"]
 
-    B --> C[REST API\nProfile editor · Dashboard · Review controls]
-    B --> D[/api/copilotkit runtime route]
+    B --> C["REST API<br/>Profile editor · Dashboard · Review controls"]
+    B --> D["/api/copilotkit runtime route"]
 
-    D --> E[AG-UI Stream\nPOST /ag-ui]
+    D --> E["AG-UI Stream<br/>POST /ag-ui"]
 
-    E --> F[⚙️ FastAPI + Microsoft Agent Framework]
+    E --> F["⚙️ FastAPI + Microsoft Agent Framework"]
 
-    F --> G[💬 Conversational Agent\nAzure OpenAI]
-    F --> H[🧩 A2UI Generation Tool\nrender_a2ui surface operations]
-    F --> I[📊 analyze_financial_data tool]
+    F --> G["💬 Conversational Agent<br/>Azure OpenAI"]
+    F --> H["🧩 A2UI Generation Tool<br/>render_a2ui surface operations"]
+    F --> I["📊 analyze_financial_data tool"]
 
-    I --> J[WealthAdvisorService\nDeterministic workflow]
-    J --> K[✅ Validated Analysis\n+ Review Payload]
+    I --> J["WealthAdvisorService<br/>Deterministic workflow"]
+    J --> K["✅ Validated Analysis<br/>+ Review Payload"]
 
-    K --> L{Human Review Gate}
-    L -->|Approve| M[✅ Decision Recorded]
-    L -->|Reject| N[❌ Rejection Logged]
+    K --> L{"Human Review Gate"}
+    L -->|Approve| M["✅ Decision Recorded"]
+    L -->|Reject| N["❌ Rejection Logged"]
 
     style A fill:#e1f5fe
     style F fill:#f3e5f5
     style J fill:#fff3e0
     style M fill:#e8f5e9
     style N fill:#fce4ec
+
 ```
 
 ### System Layout
