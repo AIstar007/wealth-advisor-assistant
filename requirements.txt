@@ -1,0 +1,13 @@
+agent-framework-core==1.21.0
+agent-framework-openai==1.16.0
+agent-framework-foundry==1.14.1
+agent-framework-ag-ui[a2ui]==1.4.0
+azure-identity>=1.25,<2
+fastapi>=0.116,<1
+httpx>=0.28,<1
+pydantic>=2.10,<3
+python-dotenv>=1,<2
+uvicorn[standard]>=0.35,<1
+pytest>=8.3,<9
+pytest-asyncio>=1,<2
+ruff>=0.12,<1

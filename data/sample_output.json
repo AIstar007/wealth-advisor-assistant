@@ -1,0 +1,167 @@
+{
+  "run_id": "demo-run-001",
+  "client_id": "CL001",
+  "plan": {
+    "objective": "Assess financial health, detect anomalies, and produce advisor-ready next actions.",
+    "steps": [
+      "fetch_context",
+      "analyze",
+      "advise",
+      "review"
+    ],
+    "analysis_focus": [
+      "cash flow",
+      "spending anomalies",
+      "liabilities",
+      "portfolio concentration"
+    ],
+    "human_review_min_risk": "HIGH"
+  },
+  "analysis": {
+    "metrics": {
+      "latest_month": "2026-09",
+      "monthly_income": 180000.0,
+      "monthly_expenses": 124000.0,
+      "net_cash_flow": 56000.0,
+      "savings_rate": 31.11111111111111,
+      "expense_trend_pct": 51.681957186544345,
+      "debt_to_income_pct": 16.11111111111111,
+      "cash_buffer_months": 1.6935483870967742,
+      "portfolio_value": 1080000.0,
+      "top_holding_concentration_pct": 57.407407407407405
+    },
+    "anomalies": [
+      {
+        "anomaly_id": "TX-T013",
+        "type": "transaction",
+        "severity": "MEDIUM",
+        "score": 3.57,
+        "description": "Transaction T013 is unusually large relative to the client's historical debit pattern.",
+        "evidence": {
+          "transaction_amount": 74000.0,
+          "category": "discretionary",
+          "date": "2026-09-12",
+          "robust_z_score": 3.57
+        }
+      },
+      {
+        "anomaly_id": "TREND-EXPENSE",
+        "type": "spending_trend",
+        "severity": "HIGH",
+        "score": 0.52,
+        "description": "Latest monthly expenses are materially above the recent baseline.",
+        "evidence": {
+          "latest_expenses": 124000.0,
+          "baseline_expenses": 81750.0,
+          "change_pct": 51.68
+        }
+      },
+      {
+        "anomaly_id": "CASH-BUFFER",
+        "type": "cash_buffer",
+        "severity": "HIGH",
+        "score": 1.31,
+        "description": "Liquid cash reserves are below the configured buffer target.",
+        "evidence": {
+          "cash_balance": 210000.0,
+          "monthly_expenses": 124000.0,
+          "buffer_months": 1.69,
+          "target_months": 3.0
+        }
+      },
+      {
+        "anomaly_id": "PORT-CONC",
+        "type": "concentration",
+        "severity": "MEDIUM",
+        "score": 0.57,
+        "description": "Portfolio value is materially concentrated in a single holding.",
+        "evidence": {
+          "top_holding_concentration_pct": 57.41
+        }
+      }
+    ],
+    "risk_signals": [
+      "Unusual transaction detected: Card payment.",
+      "Expenses increased 51.7% versus the recent baseline.",
+      "Cash reserve covers only 1.7 months of expenses.",
+      "Top holding represents 57.4% of portfolio value."
+    ],
+    "risk_level": "HIGH",
+    "trend": "deteriorating",
+    "data_quality": {
+      "status": "complete",
+      "missing_sources": [],
+      "warnings": [],
+      "fallback_used": false
+    }
+  },
+  "analyzer_narrative": {
+    "executive_summary": "The profile contains material risk signals requiring advisor review before client action.",
+    "risk_rationale": "Unusual transaction detected: Card payment. Expenses increased 51.7% versus the recent baseline. Cash reserve covers only 1.7 months of expenses. Top holding represents 57.4% of portfolio value.",
+    "priority_focus": [
+      "Transaction T013 is unusually large relative to the client's historical debit pattern.",
+      "Latest monthly expenses are materially above the recent baseline.",
+      "Liquid cash reserves are below the configured buffer target."
+    ],
+    "confidence": 0.95
+  },
+  "advisory": {
+    "client_id": "CL001",
+    "summary": "Advisor decision support generated from deterministic analysis.",
+    "recommendations": [
+      {
+        "recommendation_id": "REC-TX-T013",
+        "priority": "MEDIUM",
+        "action": "Review the unusual transaction with the client and verify its purpose.",
+        "rationale": "Transaction T013 is unusually large relative to the client's historical debit pattern.",
+        "evidence_ids": [
+          "TX-T013"
+        ],
+        "advisor_only": true
+      },
+      {
+        "recommendation_id": "REC-SPEND",
+        "priority": "HIGH",
+        "action": "Discuss the spending increase and confirm whether it is temporary or structural.",
+        "rationale": "Latest monthly expenses are materially above the recent baseline.",
+        "evidence_ids": [
+          "TREND-EXPENSE"
+        ],
+        "advisor_only": false
+      },
+      {
+        "recommendation_id": "REC-CASH",
+        "priority": "HIGH",
+        "action": "Prioritize restoring a cash reserve toward the configured target buffer.",
+        "rationale": "Liquid cash reserves are below the configured buffer target.",
+        "evidence_ids": [
+          "CASH-BUFFER"
+        ],
+        "advisor_only": false
+      },
+      {
+        "recommendation_id": "REC-CONC",
+        "priority": "MEDIUM",
+        "action": "Assess concentration risk and discuss diversification in line with the client's risk profile.",
+        "rationale": "Portfolio value is materially concentrated in a single holding.",
+        "evidence_ids": [
+          "PORT-CONC"
+        ],
+        "advisor_only": false
+      }
+    ],
+    "assumptions": [
+      "Financial and CRM data are assumed to be representative of the review period.",
+      "Anomalies are screening signals, not proof of fraud or financial misconduct."
+    ],
+    "review_required": true,
+    "confidence": 0.91,
+    "disclaimer": "Decision support for a human advisor; not individualized financial advice."
+  },
+  "review": {
+    "status": "pending",
+    "reviewer_comment": null,
+    "reviewed_at": null
+  },
+  "memory_written": false
+}

@@ -1,0 +1,29 @@
+{
+  "name": "wealth-advisor-copilotkit-ui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ag-ui/client": "1.0.2",
+    "@copilotkit/a2ui-renderer": "1.77.1",
+    "@copilotkit/react-core": "^1.54.1",
+    "@copilotkit/runtime": "1.77.2",
+    "next": "^16.4.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.0",
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "eslint": "9.35.0",
+    "eslint-config-next": "^14.2.35",
+    "typescript": "5.9.2"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "financial_data": {
+    "client_id": "CL001",
+    "as_of_date": "2026-09-30",
+    "risk_profile": "moderate",
+    "annual_income": 2160000,
+    "cash_balance": 210000,
+    "monthly_history": [
+      {"month": "2026-08", "income": 180000, "expenses": 83000, "savings": 97000, "investments": 45000, "debt_balance": 355000},
+      {"month": "2026-09", "income": 180000, "expenses": 124000, "savings": 56000, "investments": 20000, "debt_balance": 348000}
+    ],
+    "transactions": [
+      {"id": "T012", "date": "2026-09-07", "description": "Groceries", "category": "food", "amount": 9100, "transaction_type": "debit", "currency": "INR"},
+      {"id": "T013", "date": "2026-09-12", "description": "Card payment", "category": "discretionary", "amount": 74000, "transaction_type": "debit", "currency": "INR", "merchant": "Global Travel Services"},
+      {"id": "T014", "date": "2026-09-25", "description": "Salary", "category": "income", "amount": 180000, "transaction_type": "credit", "currency": "INR"}
+    ],
+    "holdings": [
+      {"symbol": "INDTECH", "asset_class": "equity", "market_value": 620000, "cost_basis": 520000},
+      {"symbol": "INDEX50", "asset_class": "equity", "market_value": 280000, "cost_basis": 240000},
+      {"symbol": "BOND01", "asset_class": "fixed_income", "market_value": 180000, "cost_basis": 175000}
+    ],
+    "liabilities": [
+      {"name": "Home loan", "outstanding": 348000, "interest_rate": 8.2, "monthly_payment": 12000}
+    ],
+    "goals": [
+      {"name": "Home down payment", "target_amount": 1200000, "target_date": "2028-03-31", "priority": "HIGH"},
+      {"name": "Emergency reserve", "target_amount": 600000, "target_date": "2027-03-31", "priority": "HIGH"}
+    ]
+  }
+}

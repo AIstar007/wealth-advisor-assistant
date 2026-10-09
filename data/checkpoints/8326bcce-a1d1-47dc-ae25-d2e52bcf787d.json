@@ -1,0 +1,357 @@
+{
+  "workflow_name": "WealthAdvisorWorkflow",
+  "graph_signature_hash": "56547844bce4ac9e416556903930a94ae0cd195b19eafce58e5b74ba1d7c98ac",
+  "checkpoint_id": "8326bcce-a1d1-47dc-ae25-d2e52bcf787d",
+  "previous_checkpoint_id": null,
+  "timestamp": "2026-10-09T10:00:13.448486+00:00",
+  "messages": {
+    "internal:review_gateway": [
+      {
+        "__pickled__": "gAWVmCkAAAAAAACMKmFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ydW5uZXJfY29udGV4dJSMD1dvcmtmbG93TWVzc2FnZZSTlCmBlH2UKIwEZGF0YZSMB0FQUFJPVkWUjAlzb3VyY2VfaWSUjBdpbnRlcm5hbDpyZXZpZXdfZ2F0ZXdheZSMCXRhcmdldF9pZJSMDnJldmlld19nYXRld2F5lIwEdHlwZZRoAIwLTWVzc2FnZVR5cGWUk5SMCHJlc3BvbnNllIWUUpSMDnRyYWNlX2NvbnRleHRzlE6MD3NvdXJjZV9zcGFuX2lkc5ROjBtvcmlnaW5hbF9yZXF1ZXN0X2luZm9fZXZlbnSUjCJhZ2VudF9mcmFtZXdvcmsuX3dvcmtmbG93cy5fZXZlbnRzlIwNV29ya2Zsb3dFdmVudJSTlCmBlH2UKGgLjAxyZXF1ZXN0X2luZm+UaAWMFGFwcC5hZ2VudHMuZXhlY3V0b3JzlIwYTmF0aXZlSHVtYW5SZXZpZXdSZXF1ZXN0lJOUKYGUfZQojAZydW5faWSUjAwyNDcyOTRhZWZmNzCUjAljbGllbnRfaWSUjAtDTC1URVNULTAwMZSMCnJpc2tfbGV2ZWyUjARISUdIlIwHc3VtbWFyeZRYjAIAAENvbnNlcnZhdGl2ZS1wcm9maWxlIGNsaWVudCB3aXRoIGEgZGV0ZXJpb3JhdGluZyBjYXNoLWZsb3cgdHJlbmQgYW5kIEhJR0ggb3ZlcmFsbCByaXNrIGxldmVsLiBLZXkgaXNzdWVzOiAoMSkgZXhwZW5zZXMgdXAgfjY3LjYlIHZzIGJhc2VsaW5lLCBjb21wcmVzc2luZyBuZXQgY2FzaCBmbG93OyAoMikgY2FzaCBidWZmZXIgYXQgfjEuMTYgbW9udGhzIHZlcnN1cyBhIDPigJFtb250aCB0YXJnZXQ7ICgzKSBwb3J0Zm9saW8gY29uY2VudHJhdGlvbiBhdCB+NjYuNyUgaW4gYSBzaW5nbGUgaG9sZGluZzsgKDQpIHBhcnRpYWwgZGF0YSBxdWFsaXR5IGR1ZSB0byBtaXNzaW5nIENSTSBjb250ZXh0LiBQcmltYXJ5IHN0YXRlZCBnb2FsIGlzIHRvIGJ1aWxkIGFuIElOUiBlbWVyZ2VuY3kgZnVuZCBvZiA2MDAsMDAwIGJ5IDIwMjfigJExMOKAkTA5IChISUdIIHByaW9yaXR5KS4gQWR2aXNvciBpbnRlcnZlbnRpb24gc2hvdWxkIGZvY3VzIG9uIHN0YWJpbGlzaW5nIHNwZW5kaW5nLCByZWJ1aWxkaW5nIGxpcXVpZCByZXNlcnZlcywgYW5kIHJlZHVjaW5nIGNvbmNlbnRyYXRpb24gcmlzayBpbiBsaW5lIHdpdGggdGhlIGNvbnNlcnZhdGl2ZSByaXNrIHByb2ZpbGUsIHdoaWxlIHZhbGlkYXRpbmcgYWxsIGFzc3VtcHRpb25zIHdpdGggdGhlIGNsaWVudC6UjBRyZWNvbW1lbmRhdGlvbnNfanNvbpRYgiMAAFt7InJlY29tbWVuZGF0aW9uX2lkIjogIlJFQy1DQVNILVBMQU4iLCAicHJpb3JpdHkiOiAiQ1JJVElDQUwiLCAiYWN0aW9uIjogIlByaW9yaXRpc2UgYSBmb3JtYWwgZW1lcmdlbmN5LWZ1bmQgYWNjdW11bGF0aW9uIHBsYW4gdG8gcmVhY2ggdGhlIElOUiA2MDAsMDAwIGdvYWwgYnkgMjAyNy0xMC0wOSwgdXNpbmcgdGhlIGV4aXN0aW5nIGRldGVybWluaXN0aWMgY2FzaC1mbG93IG1ldHJpY3MgYW5kIGdvYWwgZGF0YS4iLCAicmF0aW9uYWxlIjogIlRoZSBjbGllbnRcdTIwMTlzIGdvYWwgaXMgYW4gZW1lcmdlbmN5IGZ1bmQgb2YgNjAwLDAwMCBJTlIgYnkgMjAyNy0xMC0wOSAoSElHSCBwcmlvcml0eSksIHdoaWxlIGN1cnJlbnQgY2FzaCByZXNlcnZlcyBvbmx5IGNvdmVyIGFib3V0IDEuMTYgbW9udGhzIG9mIGV4cGVuc2VzIHZlcnN1cyBhIDNcdTIwMTFtb250aCB0YXJnZXQgKGFub21hbHkgQ0FTSC1CVUZGRVIsIHNjb3JlIDEuODQpLiBXaXRoIGEgY29uc2VydmF0aXZlIHJpc2sgcHJvZmlsZSBhbmQgYSBISUdIIG92ZXJhbGwgcmlzayBsZXZlbCwgc3RyZW5ndGhlbmluZyBsaXF1aWQgcmVzZXJ2ZXMgaXMgY2VudHJhbCB0byByZWR1Y2luZyB2dWxuZXJhYmlsaXR5IHRvIGluY29tZSBvciBleHBlbnNlIHNob2Nrcy4gVGhlIGxhdGVzdCBkZXRlcm1pbmlzdGljIG1ldHJpY3Mgc2hvdyBtb250aGx5IGluY29tZSBvZiAxODAsMDAwIElOUiwgZXhwZW5zZXMgb2YgMTU1LDAwMCBJTlIsIGFuZCBuZXQgY2FzaCBmbG93IG9mIDI1LDAwMCBJTlIgd2l0aCBhIHNhdmluZ3MgcmF0ZSBvZiB+MTMuODklLiBHaXZlbiB0aGUgbGltaXRlZCBidWZmZXIgYW5kIGRldGVyaW9yYXRpbmcgdHJlbmQsIGRpcmVjdGluZyBhdmFpbGFibGUgc3VycGx1cyBwcmltYXJpbHkgdG8gdGhlIGVtZXJnZW5jeSBmdW5kIGlzIGNvbnNpc3RlbnQgd2l0aCBib3RoIHRoZSBjbGllbnRcdTIwMTlzIHN0YXRlZCBnb2FsIGFuZCByaXNrIHRvbGVyYW5jZS4gVGhlIGFkdmlzb3Igc2hvdWxkIHRyYW5zbGF0ZSB0aGUgaGlnaC1sZXZlbCBnb2FsIGludG8gYSBtb250aC1ieS1tb250aCBmdW5kaW5nIHNjaGVkdWxlIGFuZCBjb25maXJtIGZlYXNpYmlsaXR5IHdpdGggdGhlIGNsaWVudCAoZS5nLiwgd2hldGhlciB0aGUgY3VycmVudCBuZXQgY2FzaCBmbG93IGNhbiBiZSBwcmVzZXJ2ZWQgb3IgaW5jcmVhc2VkKS4iLCAiZXZpZGVuY2VfaWRzIjogWyJBTk9NLUNBU0gtQlVGRkVSIiwgIk1FVFJJQ1MtQ0FTSEZMT1ciLCAiR09BTC1FTUVSR0VOQ1kiXSwgImFkdmlzb3Jfb25seSI6IGZhbHNlfSwgeyJyZWNvbW1lbmRhdGlvbl9pZCI6ICJSRUMtRVhQRU5TRS1ESUFHTk9TVElDIiwgInByaW9yaXR5IjogIkNSSVRJQ0FMIiwgImFjdGlvbiI6ICJDb25kdWN0IGEgZGV0YWlsZWQgZXhwZW5zZSBkaWFnbm9zdGljIHdpdGggdGhlIGNsaWVudCB0byB1bmRlcnN0YW5kIHRoZSBkcml2ZXJzIG9mIHRoZSB+NjcuNiUgaW5jcmVhc2UgaW4gbW9udGhseSBleHBlbnNlcyBhbmQgYWdyZWUgb24gY29ycmVjdGl2ZSBhY3Rpb25zIHRvIHN0YWJpbGlzZSBvciByZWR1Y2Ugc3BlbmRpbmcuIiwgInJhdGlvbmFsZSI6ICJBbm9tYWx5IFRSRU5ELUVYUEVOU0UgKHNldmVyaXR5IEhJR0gsIHNjb3JlIDAuNjgpIHNob3dzIGxhdGVzdCBleHBlbnNlcyBvZiAxNTUsMDAwIElOUiB2ZXJzdXMgYSBiYXNlbGluZSBvZiA5Miw1MDAgSU5SLCBhIDY3LjU3JSBpbmNyZWFzZS4gVGhpcyBpcyB0aGUgbWFpbiBkcml2ZXIgb2YgdGhlIGRldGVyaW9yYXRpbmcgdHJlbmQgYW5kIHRoZSBsaW1pdGVkIG5ldCBjYXNoIGZsb3cgKDI1LDAwMCBJTlIpIGFuZCBzYXZpbmdzIHJhdGUgKH4xMy44OSUpLiBGb3IgYSBjb25zZXJ2YXRpdmUgY2xpZW50IHdpdGggYSBISUdIIHJpc2sgbGV2ZWwsIHVuZXhwbGFpbmVkIHJhcGlkIGV4cGVuc2UgZ3Jvd3RoIGlzIGEgbWF0ZXJpYWwgcmlzayBzaWduYWwgKGFsc28gY2FwdHVyZWQgaW4gdGhlIHJpc2tfc2lnbmFscyBsaXN0KS4gQmVmb3JlIGRlc2lnbmluZyBhbnkgc2F2aW5ncyBvciBpbnZlc3RtZW50IHBsYW4sIHRoZSBhZHZpc29yIHNob3VsZCBjbGFyaWZ5IHdoZXRoZXIgdGhpcyBpbmNyZWFzZSBpcyBkdWUgdG8gb25lLW9mZiBpdGVtcywgc3RydWN0dXJhbCBsaWZlc3R5bGUgY2hhbmdlcywgb3IgbmVjZXNzYXJ5IGNvbW1pdG1lbnRzIChlLmcuLCBtZWRpY2FsLCBlZHVjYXRpb24sIGhvdXNpbmcpLiBCYXNlZCBvbiB0aGlzIGRpYWdub3N0aWMsIHRoZSBhZHZpc29yIGNhbiBoZWxwIHRoZSBjbGllbnQgaWRlbnRpZnkgcmVhbGlzdGljLCBub24tZGlzcnVwdGl2ZSByZWR1Y3Rpb25zIG9yIHJlXHUyMDExcGhhc2luZyBvZiBleHBlbnNlcyB0byBpbXByb3ZlIHRoZSBjYXNoIGJ1ZmZlciBhbmQgc3VwcG9ydCBlbWVyZ2VuY3ktZnVuZCBhY2N1bXVsYXRpb24uIiwgImV2aWRlbmNlX2lkcyI6IFsiQU5PTS1UUkVORC1FWFBFTlNFIiwgIk1FVFJJQ1MtRVhQRU5TRVMiLCAiUklTSy1TSUdOQUwtRVhQRU5TRSJdLCAiYWR2aXNvcl9vbmx5IjogZmFsc2V9LCB7InJlY29tbWVuZGF0aW9uX2lkIjogIlJFQy1DQVNILUJVRkZFUi1UQVJHRVRJTkciLCAicHJpb3JpdHkiOiAiSElHSCIsICJhY3Rpb24iOiAiU2V0IGFuZCBhZ3JlZSB3aXRoIHRoZSBjbGllbnQgb24gYSBjb25jcmV0ZSBwYXRoIHRvIGluY3JlYXNlIHRoZSBjYXNoIGJ1ZmZlciBmcm9tIDEuMTYgbW9udGhzIHRvIGF0IGxlYXN0IHRoZSAzXHUyMDExbW9udGggdGFyZ2V0LCBjb29yZGluYXRlZCB3aXRoIHRoZSA2MDAsMDAwIElOUiBlbWVyZ2VuY3ktZnVuZCBnb2FsLiIsICJyYXRpb25hbGUiOiAiVGhlIENBU0gtQlVGRkVSIGFub21hbHkgKHNjb3JlIDEuODQsIHNldmVyaXR5IEhJR0gpIHN0YXRlcyB0aGF0IGxpcXVpZCBjYXNoIHJlc2VydmVzIGNvdmVyIG9ubHkgMS4xNiBtb250aHMgb2YgZXhwZW5zZXMgKGNhc2ggYmFsYW5jZSAxODAsMDAwIElOUiB2cyBtb250aGx5IGV4cGVuc2VzIDE1NSwwMDAgSU5SKSBhZ2FpbnN0IGEgM1x1MjAxMW1vbnRoIHRhcmdldC4gRm9yIGEgY29uc2VydmF0aXZlIHJpc2sgcHJvZmlsZSwgc2hvcnQgY2FzaCBidWZmZXJzIGhlaWdodGVuIHRoZSBpbXBhY3Qgb2YgaW5jb21lIGRpc3J1cHRpb25zIGFuZCB1bmZvcmVzZWVuIGNvc3RzLCBhbmQgYXJlIGluY29uc2lzdGVudCB3aXRoIHRoZSBjbGllbnRcdTIwMTlzIG93biBlbWVyZ2VuY3lcdTIwMTFmdW5kIGdvYWwuIFVzaW5nIGRldGVybWluaXN0aWMgbWV0cmljcywgdGhlIGFkdmlzb3IgY2FuIG1hcCB0aGUgM1x1MjAxMW1vbnRoIGJ1ZmZlciByZXF1aXJlbWVudCAoYW5jaG9yZWQgdG8gY3VycmVudCBleHBlbnNlcykgYWdhaW5zdCB0aGUgNjAwLDAwMCBJTlIgZW1lcmdlbmN5IGZ1bmQgdGFyZ2V0IGFuZCBjbGFyaWZ5IHdoZXRoZXIgdGhlIGVtZXJnZW5jeSBmdW5kIGlzIGludGVuZGVkIHRvIGJlIGVxdWl2YWxlbnQgdG8gYSBwYXJ0aWN1bGFyIG51bWJlciBvZiBtb250aHMgb2YgZXhwZW5zZXMgb3IgYW4gYWJzb2x1dGUgYW1vdW50LiBUaGUgYWR2aXNvciBzaG91bGQgdGhlbiBoZWxwIHRoZSBjbGllbnQgZGVjaWRlIGhvdyBtdWNoIG9mIHRoZSBjdXJyZW50IGNhc2ggYmFsYW5jZSBhbmQgb25nb2luZyBzdXJwbHVzIHdpbGwgYmUgZWFybWFya2VkIHN0cmljdGx5IGZvciB0aGUgYnVmZmVyIGFuZCBob3cgbXVjaCBmb3Igb3RoZXIgcHVycG9zZXMsIGVuc3VyaW5nIHRoZSBjbGllbnQgdW5kZXJzdGFuZHMgdGhlIHRyYWRlXHUyMDExb2ZmcyAoZS5nLiwgc2xvd2VyIGRlYnQgcmVwYXltZW50IG9yIGxvd2VyIGRpc2NyZXRpb25hcnkgc3BlbmRpbmcpLiIsICJldmlkZW5jZV9pZHMiOiBbIkFOT00tQ0FTSC1CVUZGRVIiLCAiTUVUUklDUy1DQVNIQlVGRkVSIiwgIkdPQUwtRU1FUkdFTkNZIiwgIlJJU0stU0lHTkFMLUNBU0giXSwgImFkdmlzb3Jfb25seSI6IGZhbHNlfSwgeyJyZWNvbW1lbmRhdGlvbl9pZCI6ICJSRUMtQ09OQ0VOVFJBVElPTi1SRVZJRVciLCAicHJpb3JpdHkiOiAiSElHSCIsICJhY3Rpb24iOiAiUmV2aWV3IHRoZSA2Ni43JSB0b3AtaG9sZGluZyBjb25jZW50cmF0aW9uIGluIHRoZSBwb3J0Zm9saW8gd2l0aCB0aGUgY2xpZW50IGFuZCBjb25zaWRlciBhIHBoYXNlZCBkaXZlcnNpZmljYXRpb24gc3RyYXRlZ3kgYXBwcm9wcmlhdGUgZm9yIGEgY29uc2VydmF0aXZlIHJpc2sgcHJvZmlsZS4iLCAicmF0aW9uYWxlIjogIlRoZSBQT1JULUNPTkMgYW5vbWFseSBpbmRpY2F0ZXMgdGhhdCA2Ni42NyUgb2YgdGhlIDc1MCwwMDAgSU5SIHBvcnRmb2xpbyB2YWx1ZSBpcyBjb25jZW50cmF0ZWQgaW4gYSBzaW5nbGUgaG9sZGluZyAodG9wX2hvbGRpbmdfY29uY2VudHJhdGlvbl9wY3QgNjYuNjcsIHNldmVyaXR5IE1FRElVTSwgc2NvcmUgMC42NykuIFRoaXMgbGV2ZWwgb2YgY29uY2VudHJhdGlvbiBhbXBsaWZpZXMgaWRpb3N5bmNyYXRpYyByaXNrLCB3aGljaCBpcyBtaXNhbGlnbmVkIHdpdGggYSBjb25zZXJ2YXRpdmUgcmlzayBwcm9maWxlIGFuZCB0aGUgY2xpZW50XHUyMDE5cyBhbHJlYWR5IGVsZXZhdGVkIG92ZXJhbGwgcmlzayBsZXZlbC4gV2hpbGUgZGF0YSBxdWFsaXR5IGlzIHBhcnRpYWwgKERBVEEtUVVBTElUWSBhbm9tYWx5OyBtaXNzaW5nIENSTSBjb250ZXh0KSwgdGhlIGRlZ3JlZSBvZiBjb25jZW50cmF0aW9uIGlzIHN1ZmZpY2llbnRseSBoaWdoIHRvIHdhcnJhbnQgYWR2aXNvciByZXZpZXcuIEFueSBkaXZlcnNpZmljYXRpb24gbXVzdCBiZSBkaXNjdXNzZWQgaW4gdGhlIGNvbnRleHQgb2YgbGlxdWlkaXR5IG5lZWRzIChlbWVyZ2VuY3kgZnVuZCBhbmQgY2FzaCBidWZmZXIpLCB0YXggYW5kIHRyYW5zYWN0aW9uIGNvc3QgaW1wbGljYXRpb25zLCBhbmQgdGhlIGNsaWVudFx1MjAxOXMgcHJlZmVyZW5jZXMuIFRoZSBhZHZpc29yIHNob3VsZCBhdm9pZCBhZFx1MjAxMWhvYyBjaGFuZ2VzIGFuZCBpbnN0ZWFkIGNvXHUyMDExZGVzaWduIGEgc3RhZ2VkIHJlYmFsYW5jaW5nIHBsYW4sIGJlZ2lubmluZyB3aXRoIGFuIGFzc2Vzc21lbnQgb2Ygd2hldGhlciB0aGUgY29uY2VudHJhdGVkIGhvbGRpbmcgaXMgc3RyYXRlZ2ljYWxseSBpbXBvcnRhbnQgKGUuZy4sIGVtcGxveWVyIHN0b2NrLCBsZWdhY3kgYXNzZXQpIGFuZCB3aGF0IG1pbmltdW0gYWNjZXB0YWJsZSBjb25jZW50cmF0aW9uIHRoZSBjbGllbnQgaXMgY29tZm9ydGFibGUgd2l0aC4iLCAiZXZpZGVuY2VfaWRzIjogWyJBTk9NLVBPUlQtQ09OQyIsICJNRVRSSUNTLVBPUlRGT0xJTyIsICJSSVNLLVNJR05BTC1DT05DIl0sICJhZHZpc29yX29ubHkiOiBmYWxzZX0sIHsicmVjb21tZW5kYXRpb25faWQiOiAiUkVDLUNBU0hGTE9XLVBST1RFQ1RJT04iLCAicHJpb3JpdHkiOiAiSElHSCIsICJhY3Rpb24iOiAiRm9jdXMgY2xpZW50IGRpc2N1c3Npb25zIG9uIHByb3RlY3RpbmcgYW5kIG1vZGVzdGx5IGltcHJvdmluZyBuZXQgY2FzaCBmbG93ICgyNSwwMDAgSU5SL21vbnRoKSB3aXRob3V0IHJlbHlpbmcgb24gb3B0aW1pc3RpYyBhc3N1bXB0aW9ucywgdG8gc3VwcG9ydCBlbWVyZ2VuY3ktZnVuZCBidWlsZGluZyBhbmQgcmVkdWNlIG92ZXJhbGwgcmlzay4iLCAicmF0aW9uYWxlIjogIkRldGVybWluaXN0aWMgbWV0cmljcyBzaG93IG1vbnRobHkgaW5jb21lIG9mIDE4MCwwMDAgSU5SLCBleHBlbnNlcyBvZiAxNTUsMDAwIElOUiwgYW5kIG5ldCBjYXNoIGZsb3cgb2YgMjUsMDAwIElOUiB3aXRoIGEgc2F2aW5ncyByYXRlIG9mIH4xMy44OSUuIEdpdmVuIHRoZSBISUdIIG92ZXJhbGwgcmlzayBsZXZlbCBhbmQgZGV0ZXJpb3JhdGluZyB0cmVuZCwgdGhlIGN1cnJlbnQgc3VycGx1cyBpcyByZWxhdGl2ZWx5IHRoaW4gZm9yIGEgY29uc2VydmF0aXZlIGNsaWVudCBmYWNpbmcgcmlzaW5nIGV4cGVuc2VzIGFuZCBhIGxvdyBjYXNoIGJ1ZmZlci4gUmF0aGVyIHRoYW4gZGVzaWduaW5nIGFnZ3Jlc3NpdmUgaW52ZXN0bWVudCBwbGFucywgdGhlIGFkdmlzb3Igc2hvdWxkIHdvcmsgd2l0aCB0aGUgY2xpZW50IHRvIHNlY3VyZSBpbmNvbWUgc3RhYmlsaXR5IChlLmcuLCBqb2Igc2VjdXJpdHksIGRpdmVyc2lmaWNhdGlvbiBvZiBpbmNvbWUgc291cmNlcyBpZiBhcHBsaWNhYmxlKSBhbmQgbWFpbnRhaW4gb3Igc2xpZ2h0bHkgaW1wcm92ZSB0aGUgbmV0IGNhc2ggZmxvdyBieSBjb250YWluaW5nIGRpc2NyZXRpb25hcnkgc3BlbmRpbmcgaWRlbnRpZmllZCBpbiB0aGUgZXhwZW5zZSBkaWFnbm9zdGljLiBUaGlzIGNhc2gtZmxvdyBmb2N1cyBpcyBjb25zaXN0ZW50IHdpdGggdGhlIGNsaWVudFx1MjAxOXMgZW1lcmdlbmN5LWZ1bmQgZ29hbCBhbmQgcmVkdWNlcyB0aGUgbmVlZCB0byByZWx5IG9uIGxldmVyYWdlZCBvciBoaWdoXHUyMDExdm9sYXRpbGl0eSBzdHJhdGVnaWVzIHRoYXQgd291bGQgYmUgdW5zdWl0YWJsZSBmb3IgdGhlaXIgcmlzayBwcm9maWxlLiBBbnkgcHJvcG9zZWQgY2hhbmdlcyBzaG91bGQgYmUgdmFsaWRhdGVkIGFnYWluc3QgYWN0dWFsIGJ1ZGdldCBkYXRhIHJhdGhlciB0aGFuIHByb2plY3Rpb25zLiIsICJldmlkZW5jZV9pZHMiOiBbIk1FVFJJQ1MtQ0FTSEZMT1ciLCAiUklTSy1TSUdOQUwtRVhQRU5TRSIsICJSSVNLLUxFVkVMLUhJR0giXSwgImFkdmlzb3Jfb25seSI6IGZhbHNlfSwgeyJyZWNvbW1lbmRhdGlvbl9pZCI6ICJSRUMtREFUQS1WQUxJREFUSU9OIiwgInByaW9yaXR5IjogIk1FRElVTSIsICJhY3Rpb24iOiAiRXhwbGljaXRseSB2YWxpZGF0ZSBrZXkgYXNzdW1wdGlvbnMgYW5kIGRhdGEgcG9pbnRzIHdpdGggdGhlIGNsaWVudCwgZXNwZWNpYWxseSBhcm91bmQgaW5jb21lIHN0YWJpbGl0eSwgbGlhYmlsaXRpZXMsIGFuZCBnb2FscywgZ2l2ZW4gdGhlIHBhcnRpYWwgZGF0YSBxdWFsaXR5IGFuZCBtaXNzaW5nIENSTSBjb250ZXh0LiIsICJyYXRpb25hbGUiOiAiVGhlIERBVEEtUVVBTElUWSBhbm9tYWx5IChzZXZlcml0eSBNRURJVU0sIHNjb3JlIDEuMCkgbm90ZXMgbWlzc2luZyBDUk0gZGF0YSBhbmQgdGhhdCBhbmFseXNpcyByZWxpZWQgc29sZWx5IG9uIGNsaWVudC1wcm92aWRlZCBmaW5hbmNpYWwgZGF0YS4gUmlza19zaWduYWxzIGFsc28gaGlnaGxpZ2h0IHRoYXQgZXh0ZXJuYWwgY29udGV4dCBpcyBpbmNvbXBsZXRlIGFuZCByZWNvbW1lbmRhdGlvbnMgc2hvdWxkIGJlIHZhbGlkYXRlZCB3aXRoIHRoZSBhZHZpc29yLiBGb3IgYSBjb25zZXJ2YXRpdmUgY2xpZW50IHdpdGggYSBISUdIIHJpc2sgbGV2ZWwsIHVuZG9jdW1lbnRlZCBsaWFiaWxpdGllcywgdW5yZWNvcmRlZCBjb21taXRtZW50cywgb3IgYWRkaXRpb25hbCBnb2FscyBjb3VsZCBtYXRlcmlhbGx5IGNoYW5nZSB0aGUgYXBwcm9wcmlhdGUgc3RyYXRlZ3kgKGUuZy4sIGlmIGhpZGRlbiBkZWJ0IHJhaXNlcyB0aGUgZGVidC10by1pbmNvbWUgcmF0aW8gYmV5b25kIHRoZSBkZXRlcm1pbmlzdGljIDguNTYlKS4gQmVmb3JlIGltcGxlbWVudGluZyBhbnkgcGxhbiwgdGhlIGFkdmlzb3Igc2hvdWxkIHN5c3RlbWF0aWNhbGx5IHJldmlldzogKDEpIGFsbCBrbm93biBkZWJ0cyBhbmQgb2JsaWdhdGlvbnM7ICgyKSB1cGNvbWluZyBsYXJnZSBleHBlbmRpdHVyZXM7ICgzKSBhbnkgb3RoZXIgZ29hbHMgKHJldGlyZW1lbnQsIGVkdWNhdGlvbiwgaG91c2luZykgdGhhdCBtaWdodCBjb21wZXRlIHdpdGggdGhlIGVtZXJnZW5jeSBmdW5kOyBhbmQgKDQpIHdoZXRoZXIgdGhlIHJlcG9ydGVkIGluY29tZSBhbmQgZXhwZW5zZXMgYXJlIHJlcHJlc2VudGF0aXZlIGFuZCBzdXN0YWluYWJsZS4gVGhpcyB2YWxpZGF0aW9uIHdpbGwgcmVkdWNlIG1vZGVsIHJpc2sgYW5kIGVuc3VyZSB0aGF0IHJlY29tbWVuZGF0aW9ucyBhcmUgYW5jaG9yZWQgaW4gYSBmdWxsIHVuZGVyc3RhbmRpbmcgb2YgdGhlIGNsaWVudFx1MjAxOXMgc2l0dWF0aW9uLiIsICJldmlkZW5jZV9pZHMiOiBbIkFOT00tREFUQS1RVUFMSVRZIiwgIk1FVFJJQ1MtREFUQVFVQUxJVFkiLCAiUklTSy1TSUdOQUwtREFUQSJdLCAiYWR2aXNvcl9vbmx5IjogZmFsc2V9LCB7InJlY29tbWVuZGF0aW9uX2lkIjogIlJFQy1ERUJULVBPU0lUSU9OLUNIRUNLIiwgInByaW9yaXR5IjogIk1FRElVTSIsICJhY3Rpb24iOiAiQ29uZmlybSB0aGUgbmF0dXJlIGFuZCB0ZXJtcyBvZiBleGlzdGluZyBkZWJ0LCBkZXNwaXRlIHRoZSBjdXJyZW50bHkgbW9kZXJhdGUgZGVidC10by1pbmNvbWUgcmF0aW8sIGFuZCBlbnN1cmUgbm8gaGlnaGVyLXJpc2sgYm9ycm93aW5nIGlzIHBsYW5uZWQgdG8gZnVuZCBzcGVuZGluZyBvciBpbnZlc3RtZW50cy4iLCAicmF0aW9uYWxlIjogIkRldGVybWluaXN0aWMgYW5hbHlzaXMgcmVwb3J0cyBhIGRlYnRfdG9faW5jb21lX3BjdCBvZiA4LjU2JSwgd2hpY2ggYXBwZWFycyBtb2RlcmF0ZSBvbiBpdHMgZmFjZS4gSG93ZXZlciwgZ2l2ZW4gcGFydGlhbCBkYXRhIHF1YWxpdHkgYW5kIGEgZGV0ZXJpb3JhdGluZyBleHBlbnNlIHRyZW5kLCB0aGVyZSBpcyBhIHJpc2sgdGhhdCB0aGUgY2xpZW50IG1pZ2h0IGNvbnNpZGVyIGFkZGl0aW9uYWwgYm9ycm93aW5nIHRvIHN1c3RhaW4gaGlnaGVyIHNwZW5kaW5nIG9yIHRvIGludmVzdCwgd2hpY2ggd291bGQgY29uZmxpY3Qgd2l0aCB0aGVpciBjb25zZXJ2YXRpdmUgcmlzayBwcm9maWxlIGFuZCBjdXJyZW50IEhJR0ggcmlzayBsZXZlbC4gVGhlIGFkdmlzb3Igc2hvdWxkIHZlcmlmeSB0aGUgY29tcG9zaXRpb24gb2YgZXhpc3RpbmcgZGVidCAoc2VjdXJlZCB2cyB1bnNlY3VyZWQsIGludGVyZXN0IHJhdGVzLCBtYXR1cml0aWVzKSBhbmQgY29uZmlybSB3aXRoIHRoZSBjbGllbnQgdGhhdCB0aGV5IGFyZSBub3QgcGxhbm5pbmcgdG8gbGV2ZXJhZ2UgZnVydGhlciB0byBicmlkZ2UgY2FzaC1mbG93IGdhcHMgb3IgcHVyc3VlIHNwZWN1bGF0aXZlIGludmVzdG1lbnRzLiBUaGlzIGNoZWNrIHByb3RlY3RzIHRoZSBlbWVyZ2VuY3ktZnVuZCBhbmQgY2FzaC1idWZmZXIgc3RyYXRlZ3kgZnJvbSBiZWluZyB1bmRlcm1pbmVkIGJ5IGdyb3dpbmcgb2JsaWdhdGlvbnMgdGhhdCB3ZXJlIG5vdCBjYXB0dXJlZCBpbiB0aGUgZGV0ZXJtaW5pc3RpYyBkYXRhLiIsICJldmlkZW5jZV9pZHMiOiBbIk1FVFJJQ1MtREVCVCIsICJBTk9NLURBVEEtUVVBTElUWSJdLCAiYWR2aXNvcl9vbmx5IjogZmFsc2V9XZSMBnByb21wdJSMj1JldmlldyB0aGUgcHJvcG9zZWQgZGVjaXNpb24gc3VwcG9ydC4gUmVwbHkgQVBQUk9WRSB0byBhY2NlcHQsIFJFSkVDVCB0byBibG9jayBpdCwgb3IgT1ZFUlJJREU6IDxjb21tZW50PiB0byByZWNvcmQgYW4gZXhwbGljaXQgaHVtYW4gb3ZlcnJpZGUulHVijAZvcmlnaW6UaBSME1dvcmtmbG93RXZlbnRTb3VyY2WUk5SMCEVYRUNVVE9SlIWUUpSMBXN0YXRllE6MB2RldGFpbHOUTowLZXhlY3V0b3JfaWSUTowLX3JlcXVlc3RfaWSUjCQwZWZmMGM1ZC0zOTIxLTRiZjktOWU2ZC1lOTNjNmMyMzJmMDmUjBNfc291cmNlX2V4ZWN1dG9yX2lklGgKjA1fcmVxdWVzdF90eXBllGgcjA5fcmVzcG9uc2VfdHlwZZSMCGJ1aWx0aW5zlIwDc3RylJOUjAlpdGVyYXRpb26UTnVidWIu",
+        "__type__": "agent_framework._workflows._runner_context:WorkflowMessage"
+      }
+    ]
+  },
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_resolved_workflow_run_kwargs": {},
+    "_routed_workflow_run_kwargs": {},
+    "_executor_state": {
+      "orchestrator": {},
+      "data_fetcher": {},
+      "analyzer": {},
+      "advisor": {},
+      "review_gateway": {
+        "current": {
+          "run_id": "247294aeff70",
+          "plan": {
+            "objective": "Coordinate a wealth-advisor assistant workflow for client CL-TEST-001 given a conservative risk profile and existing transactions, holdings, and goals.",
+            "steps": [
+              "fetch_context",
+              "analyze",
+              "advise",
+              "review"
+            ],
+            "analysis_focus": [
+              "Client CRM profile and KYC summary",
+              "Existing holdings and allocation vs. conservative risk profile",
+              "Recent transactions for suitability and consistency",
+              "Goals funding status and time horizons",
+              "Cash flow and liquidity needs",
+              "Diversification, concentration, and downside risk exposures"
+            ],
+            "human_review_min_risk": "HIGH",
+            "rationale": "The assistant must first pull all CRM and portfolio data, then run deterministic, rule-based analyses on risk alignment, diversification, liquidity, and goal progress without inventing financial facts. Based on that, it will draft specific advisor recommendations (e.g., rebalancing, risk reduction, goal funding adjustments). Because portfolio changes and suitability carry material financial impact, any output that touches investment or product recommendations requires at least HIGH-level human advisor review before being delivered to the client or implemented."
+          },
+          "financial_data": {
+            "client_id": "CL-TEST-001",
+            "as_of_date": "2026-10-09",
+            "risk_profile": "conservative",
+            "annual_income": 2160000.0,
+            "cash_balance": 180000.0,
+            "monthly_history": [
+              {
+                "month": "2026-07",
+                "income": 180000.0,
+                "expenses": 90000.0,
+                "savings": 90000.0,
+                "investments": 25000.0,
+                "debt_balance": 200000.0
+              },
+              {
+                "month": "2026-08",
+                "income": 180000.0,
+                "expenses": 95000.0,
+                "savings": 85000.0,
+                "investments": 25000.0,
+                "debt_balance": 190000.0
+              },
+              {
+                "month": "2026-09",
+                "income": 180000.0,
+                "expenses": 155000.0,
+                "savings": 25000.0,
+                "investments": 10000.0,
+                "debt_balance": 185000.0
+              }
+            ],
+            "transactions": [
+              {
+                "id": "TX-001",
+                "date": "2026-10-02",
+                "description": "Monthly groceries",
+                "category": "groceries",
+                "amount": 8500.0,
+                "transaction_type": "debit",
+                "currency": "INR",
+                "merchant": "Sample Market"
+              },
+              {
+                "id": "TX-002",
+                "date": "2026-10-04",
+                "description": "Large electronics purchase",
+                "category": "electronics",
+                "amount": 85000.0,
+                "transaction_type": "debit",
+                "currency": "INR",
+                "merchant": "Sample Electronics"
+              },
+              {
+                "id": "TX-003",
+                "date": "2026-10-06",
+                "description": "Monthly salary",
+                "category": "income",
+                "amount": 180000.0,
+                "transaction_type": "credit",
+                "currency": "INR",
+                "merchant": "Employer"
+              }
+            ],
+            "holdings": [
+              {
+                "symbol": "FUND-A",
+                "asset_class": "equity",
+                "market_value": 500000.0,
+                "cost_basis": 450000.0
+              },
+              {
+                "symbol": "FUND-B",
+                "asset_class": "debt",
+                "market_value": 250000.0,
+                "cost_basis": 240000.0
+              }
+            ],
+            "liabilities": [
+              {
+                "name": "Personal loan",
+                "outstanding": 185000.0,
+                "interest_rate": 12.0,
+                "monthly_payment": 12000.0
+              }
+            ],
+            "goals": [
+              {
+                "name": "Emergency fund",
+                "target_amount": 600000.0,
+                "target_date": "2027-10-09",
+                "priority": "HIGH"
+              }
+            ]
+          },
+          "crm_context": null,
+          "data_quality": {
+            "status": "partial",
+            "missing_sources": [
+              "crm"
+            ],
+            "warnings": [
+              "CRM context could not be retrieved; analysis used client-provided financial data."
+            ],
+            "fallback_used": true
+          },
+          "analysis": {
+            "metrics": {
+              "latest_month": "2026-09",
+              "monthly_income": 180000.0,
+              "monthly_expenses": 155000.0,
+              "net_cash_flow": 25000.0,
+              "savings_rate": 13.88888888888889,
+              "expense_trend_pct": 67.56756756756756,
+              "debt_to_income_pct": 8.564814814814815,
+              "cash_buffer_months": 1.1612903225806452,
+              "portfolio_value": 750000.0,
+              "top_holding_concentration_pct": 66.66666666666666
+            },
+            "anomalies": [
+              {
+                "anomaly_id": "TREND-EXPENSE",
+                "type": "spending_trend",
+                "severity": "HIGH",
+                "score": 0.68,
+                "description": "Latest monthly expenses are materially above the recent baseline.",
+                "evidence": {
+                  "latest_expenses": 155000.0,
+                  "baseline_expenses": 92500.0,
+                  "change_pct": 67.57
+                }
+              },
+              {
+                "anomaly_id": "CASH-BUFFER",
+                "type": "cash_buffer",
+                "severity": "HIGH",
+                "score": 1.84,
+                "description": "Liquid cash reserves are below the configured buffer target.",
+                "evidence": {
+                  "cash_balance": 180000.0,
+                  "monthly_expenses": 155000.0,
+                  "buffer_months": 1.16,
+                  "target_months": 3.0
+                }
+              },
+              {
+                "anomaly_id": "PORT-CONC",
+                "type": "concentration",
+                "severity": "MEDIUM",
+                "score": 0.67,
+                "description": "Portfolio value is materially concentrated in a single holding.",
+                "evidence": {
+                  "top_holding_concentration_pct": 66.67
+                }
+              },
+              {
+                "anomaly_id": "DATA-QUALITY",
+                "type": "data_quality",
+                "severity": "MEDIUM",
+                "score": 1.0,
+                "description": "Analysis completed with incomplete external context.",
+                "evidence": {
+                  "missing_sources": [
+                    "crm"
+                  ],
+                  "warnings": [
+                    "CRM context could not be retrieved; analysis used client-provided financial data."
+                  ]
+                }
+              }
+            ],
+            "risk_signals": [
+              "Expenses increased 67.6% versus the recent baseline.",
+              "Cash reserve covers only 1.2 months of expenses.",
+              "Top holding represents 66.7% of portfolio value.",
+              "External context is incomplete; recommendations should be validated by the advisor."
+            ],
+            "risk_level": "HIGH",
+            "trend": "deteriorating",
+            "data_quality": {
+              "status": "partial",
+              "missing_sources": [
+                "crm"
+              ],
+              "warnings": [
+                "CRM context could not be retrieved; analysis used client-provided financial data."
+              ],
+              "fallback_used": true
+            }
+          },
+          "analyzer_narrative": {
+            "executive_summary": "Latest month (2026-09) shows positive net cash flow of 25,000 on income of 180,000 and expenses of 155,000, with a calculated savings rate of 13.89%. Despite the surplus, overall risk level is flagged as HIGH and the trend as deteriorating, driven primarily by a sharp rise in expenses, a thin cash buffer, and high portfolio concentration. Data quality is marked as partial, so these signals are for screening and advisor validation rather than definitive planning conclusions.",
+            "risk_rationale": "Facts from the deterministic metrics:\n- Monthly income: 180,000\n- Monthly expenses: 155,000\n- Net cash flow: 25,000\n- Savings rate: 13.89%\n- Expense trend metric: 67.57%\n- Debt-to-income: 8.56%\n- Cash buffer: 1.16 months\n- Portfolio value: 750,000\n- Top holding concentration: 66.67%\n\nScreening signals from anomaly detection (not new calculations):\n- Spending trend (HIGH severity, score 0.68): latest expenses of 155,000 are materially above the recent baseline of 92,500, a 67.57% increase.\n- Cash buffer (HIGH severity, score 1.84): cash balance of 180,000 covers 1.16 months of expenses versus a target of 3 months.\n- Portfolio concentration (MEDIUM severity, score 0.67): 66.67% of portfolio value is in a single holding.\n- Data quality (MEDIUM severity, score 1.0): CRM data is missing; analysis relied on client-provided financial data only.\n\nCombined, these signals support the labeled overall risk level of HIGH and a deteriorating trend: expenses are rising sharply against a relatively small cash buffer, and the investment portfolio is concentrated, while contextual data is incomplete and should be validated.",
+            "priority_focus": [
+              "Monitor and address the 67.57% expense increase relative to the 92,500 baseline, as it is flagged with HIGH severity.",
+              "Strengthen liquidity, given the 1.16-month cash buffer versus a 3-month target, another HIGH-severity signal.",
+              "Review portfolio construction and risk exposure around the top holding that accounts for 66.67% of total value (MEDIUM severity concentration).",
+              "Validate all findings with the advisor, given partial data quality and missing CRM context (MEDIUM severity)."
+            ],
+            "confidence": 0.9
+          },
+          "advisory": {
+            "client_id": "CL-TEST-001",
+            "summary": "Conservative-profile client with a deteriorating cash-flow trend and HIGH overall risk level. Key issues: (1) expenses up ~67.6% vs baseline, compressing net cash flow; (2) cash buffer at ~1.16 months versus a 3‑month target; (3) portfolio concentration at ~66.7% in a single holding; (4) partial data quality due to missing CRM context. Primary stated goal is to build an INR emergency fund of 600,000 by 2027‑10‑09 (HIGH priority). Advisor intervention should focus on stabilising spending, rebuilding liquid reserves, and reducing concentration risk in line with the conservative risk profile, while validating all assumptions with the client.",
+            "recommendations": [
+              {
+                "recommendation_id": "REC-CASH-PLAN",
+                "priority": "CRITICAL",
+                "action": "Prioritise a formal emergency-fund accumulation plan to reach the INR 600,000 goal by 2027-10-09, using the existing deterministic cash-flow metrics and goal data.",
+                "rationale": "The client’s goal is an emergency fund of 600,000 INR by 2027-10-09 (HIGH priority), while current cash reserves only cover about 1.16 months of expenses versus a 3‑month target (anomaly CASH-BUFFER, score 1.84). With a conservative risk profile and a HIGH overall risk level, strengthening liquid reserves is central to reducing vulnerability to income or expense shocks. The latest deterministic metrics show monthly income of 180,000 INR, expenses of 155,000 INR, and net cash flow of 25,000 INR with a savings rate of ~13.89%. Given the limited buffer and deteriorating trend, directing available surplus primarily to the emergency fund is consistent with both the client’s stated goal and risk tolerance. The advisor should translate the high-level goal into a month-by-month funding schedule and confirm feasibility with the client (e.g., whether the current net cash flow can be preserved or increased).",
+                "evidence_ids": [
+                  "ANOM-CASH-BUFFER",
+                  "METRICS-CASHFLOW",
+                  "GOAL-EMERGENCY"
+                ],
+                "advisor_only": false
+              },
+              {
+                "recommendation_id": "REC-EXPENSE-DIAGNOSTIC",
+                "priority": "CRITICAL",
+                "action": "Conduct a detailed expense diagnostic with the client to understand the drivers of the ~67.6% increase in monthly expenses and agree on corrective actions to stabilise or reduce spending.",
+                "rationale": "Anomaly TREND-EXPENSE (severity HIGH, score 0.68) shows latest expenses of 155,000 INR versus a baseline of 92,500 INR, a 67.57% increase. This is the main driver of the deteriorating trend and the limited net cash flow (25,000 INR) and savings rate (~13.89%). For a conservative client with a HIGH risk level, unexplained rapid expense growth is a material risk signal (also captured in the risk_signals list). Before designing any savings or investment plan, the advisor should clarify whether this increase is due to one-off items, structural lifestyle changes, or necessary commitments (e.g., medical, education, housing). Based on this diagnostic, the advisor can help the client identify realistic, non-disruptive reductions or re‑phasing of expenses to improve the cash buffer and support emergency-fund accumulation.",
+                "evidence_ids": [
+                  "ANOM-TREND-EXPENSE",
+                  "METRICS-EXPENSES",
+                  "RISK-SIGNAL-EXPENSE"
+                ],
+                "advisor_only": false
+              },
+              {
+                "recommendation_id": "REC-CASH-BUFFER-TARGETING",
+                "priority": "HIGH",
+                "action": "Set and agree with the client on a concrete path to increase the cash buffer from 1.16 months to at least the 3‑month target, coordinated with the 600,000 INR emergency-fund goal.",
+                "rationale": "The CASH-BUFFER anomaly (score 1.84, severity HIGH) states that liquid cash reserves cover only 1.16 months of expenses (cash balance 180,000 INR vs monthly expenses 155,000 INR) against a 3‑month target. For a conservative risk profile, short cash buffers heighten the impact of income disruptions and unforeseen costs, and are inconsistent with the client’s own emergency‑fund goal. Using deterministic metrics, the advisor can map the 3‑month buffer requirement (anchored to current expenses) against the 600,000 INR emergency fund target and clarify whether the emergency fund is intended to be equivalent to a particular number of months of expenses or an absolute amount. The advisor should then help the client decide how much of the current cash balance and ongoing surplus will be earmarked strictly for the buffer and how much for other purposes, ensuring the client understands the trade‑offs (e.g., slower debt repayment or lower discretionary spending).",
+                "evidence_ids": [
+                  "ANOM-CASH-BUFFER",
+                  "METRICS-CASHBUFFER",
+                  "GOAL-EMERGENCY",
+                  "RISK-SIGNAL-CASH"
+                ],
+                "advisor_only": false
+              },
+              {
+                "recommendation_id": "REC-CONCENTRATION-REVIEW",
+                "priority": "HIGH",
+                "action": "Review the 66.7% top-holding concentration in the portfolio with the client and consider a phased diversification strategy appropriate for a conservative risk profile.",
+                "rationale": "The PORT-CONC anomaly indicates that 66.67% of the 750,000 INR portfolio value is concentrated in a single holding (top_holding_concentration_pct 66.67, severity MEDIUM, score 0.67). This level of concentration amplifies idiosyncratic risk, which is misaligned with a conservative risk profile and the client’s already elevated overall risk level. While data quality is partial (DATA-QUALITY anomaly; missing CRM context), the degree of concentration is sufficiently high to warrant advisor review. Any diversification must be discussed in the context of liquidity needs (emergency fund and cash buffer), tax and transaction cost implications, and the client’s preferences. The advisor should avoid ad‑hoc changes and instead co‑design a staged rebalancing plan, beginning with an assessment of whether the concentrated holding is strategically important (e.g., employer stock, legacy asset) and what minimum acceptable concentration the client is comfortable with.",
+                "evidence_ids": [
+                  "ANOM-PORT-CONC",
+                  "METRICS-PORTFOLIO",
+                  "RISK-SIGNAL-CONC"
+                ],
+                "advisor_only": false
+              },
+              {
+                "recommendation_id": "REC-CASHFLOW-PROTECTION",
+                "priority": "HIGH",
+                "action": "Focus client discussions on protecting and modestly improving net cash flow (25,000 INR/month) without relying on optimistic assumptions, to support emergency-fund building and reduce overall risk.",
+                "rationale": "Deterministic metrics show monthly income of 180,000 INR, expenses of 155,000 INR, and net cash flow of 25,000 INR with a savings rate of ~13.89%. Given the HIGH overall risk level and deteriorating trend, the current surplus is relatively thin for a conservative client facing rising expenses and a low cash buffer. Rather than designing aggressive investment plans, the advisor should work with the client to secure income stability (e.g., job security, diversification of income sources if applicable) and maintain or slightly improve the net cash flow by containing discretionary spending identified in the expense diagnostic. This cash-flow focus is consistent with the client’s emergency-fund goal and reduces the need to rely on leveraged or high‑volatility strategies that would be unsuitable for their risk profile. Any proposed changes should be validated against actual budget data rather than projections.",
+                "evidence_ids": [
+                  "METRICS-CASHFLOW",
+                  "RISK-SIGNAL-EXPENSE",
+                  "RISK-LEVEL-HIGH"
+                ],
+                "advisor_only": false
+              },
+              {
+                "recommendation_id": "REC-DATA-VALIDATION",
+                "priority": "MEDIUM",
+                "action": "Explicitly validate key assumptions and data points with the client, especially around income stability, liabilities, and goals, given the partial data quality and missing CRM context.",
+                "rationale": "The DATA-QUALITY anomaly (severity MEDIUM, score 1.0) notes missing CRM data and that analysis relied solely on client-provided financial data. Risk_signals also highlight that external context is incomplete and recommendations should be validated with the advisor. For a conservative client with a HIGH risk level, undocumented liabilities, unrecorded commitments, or additional goals could materially change the appropriate strategy (e.g., if hidden debt raises the debt-to-income ratio beyond the deterministic 8.56%). Before implementing any plan, the advisor should systematically review: (1) all known debts and obligations; (2) upcoming large expenditures; (3) any other goals (retirement, education, housing) that might compete with the emergency fund; and (4) whether the reported income and expenses are representative and sustainable. This validation will reduce model risk and ensure that recommendations are anchored in a full understanding of the client’s situation.",
+                "evidence_ids": [
+                  "ANOM-DATA-QUALITY",
+                  "METRICS-DATAQUALITY",
+                  "RISK-SIGNAL-DATA"
+                ],
+                "advisor_only": false
+              },
+              {
+                "recommendation_id": "REC-DEBT-POSITION-CHECK",
+                "priority": "MEDIUM",
+                "action": "Confirm the nature and terms of existing debt, despite the currently moderate debt-to-income ratio, and ensure no higher-risk borrowing is planned to fund spending or investments.",
+                "rationale": "Deterministic analysis reports a debt_to_income_pct of 8.56%, which appears moderate on its face. However, given partial data quality and a deteriorating expense trend, there is a risk that the client might consider additional borrowing to sustain higher spending or to invest, which would conflict with their conservative risk profile and current HIGH risk level. The advisor should verify the composition of existing debt (secured vs unsecured, interest rates, maturities) and confirm with the client that they are not planning to leverage further to bridge cash-flow gaps or pursue speculative investments. This check protects the emergency-fund and cash-buffer strategy from being undermined by growing obligations that were not captured in the deterministic data.",
+                "evidence_ids": [
+                  "METRICS-DEBT",
+                  "ANOM-DATA-QUALITY"
+                ],
+                "advisor_only": false
+              }
+            ],
+            "assumptions": [
+              "Client data (income, expenses, portfolio, cash balance, debt metrics) is accurate as provided in the deterministic analysis, but external CRM context is missing.",
+              "Emergency fund goal of 600,000 INR is intended to be held in liquid or near-liquid instruments suitable for a conservative profile.",
+              "Monthly income of 180,000 INR and expenses of 155,000 INR are representative of current conditions, not a one-off month, unless the advisor’s follow-up reveals otherwise.",
+              "The 3-month cash-buffer target referenced in the CASH-BUFFER anomaly is appropriate for the client’s risk tolerance, but the advisor should confirm whether the client prefers a higher or lower buffer.",
+              "Portfolio value of 750,000 INR and top-holding concentration of 66.67% refer to market values at or near the latest analysis date and may have changed since; advisor should use current valuations before acting.",
+              "Debt_to_income_pct of 8.56% reflects known debt and may understate obligations if off-book or informal borrowing exists."
+            ],
+            "review_required": true,
+            "confidence": 0.83,
+            "disclaimer": "This output is advisor decision-support based on deterministic analysis and historical memory from the supplied payload. It is not individualized financial advice to the client. All recommendations must be reviewed, validated with complete client information, and adjusted by a qualified human wealth advisor before implementation. No returns are predicted or guaranteed, and no currency conversions have been performed; all amounts are expressed in the original currency codes provided (INR)."
+          },
+          "memory_written": false
+        }
+      }
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 4,
+  "metadata": {},
+  "version": "1.0"
+}

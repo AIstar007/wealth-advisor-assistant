@@ -1,0 +1,43 @@
+{
+  "client_id": "CL001",
+  "as_of_date": "2026-09-30",
+  "risk_profile": "moderate",
+  "annual_income": 2160000,
+  "cash_balance": 210000,
+  "monthly_history": [
+    {"month": "2026-04", "income": 180000, "expenses": 82000, "savings": 98000, "investments": 35000, "debt_balance": 420000},
+    {"month": "2026-05", "income": 180000, "expenses": 79000, "savings": 101000, "investments": 40000, "debt_balance": 405000},
+    {"month": "2026-06", "income": 180000, "expenses": 81000, "savings": 99000, "investments": 42000, "debt_balance": 390000},
+    {"month": "2026-07", "income": 180000, "expenses": 84000, "savings": 96000, "investments": 45000, "debt_balance": 372000},
+    {"month": "2026-08", "income": 180000, "expenses": 83000, "savings": 97000, "investments": 45000, "debt_balance": 355000},
+    {"month": "2026-09", "income": 180000, "expenses": 124000, "savings": 56000, "investments": 20000, "debt_balance": 348000}
+  ],
+  "transactions": [
+    {"id": "T001", "date": "2026-04-04", "description": "Rent", "category": "housing", "amount": 30000, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T002", "date": "2026-04-14", "description": "Groceries", "category": "food", "amount": 8200, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T003", "date": "2026-05-05", "description": "Rent", "category": "housing", "amount": 30000, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T004", "date": "2026-05-16", "description": "Groceries", "category": "food", "amount": 9100, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T005", "date": "2026-06-05", "description": "Rent", "category": "housing", "amount": 30000, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T006", "date": "2026-06-17", "description": "Groceries", "category": "food", "amount": 8700, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T007", "date": "2026-07-05", "description": "Rent", "category": "housing", "amount": 30000, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T008", "date": "2026-07-19", "description": "Groceries", "category": "food", "amount": 9500, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T009", "date": "2026-08-05", "description": "Rent", "category": "housing", "amount": 30000, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T010", "date": "2026-08-18", "description": "Groceries", "category": "food", "amount": 9300, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T011", "date": "2026-09-03", "description": "Rent", "category": "housing", "amount": 30000, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T012", "date": "2026-09-07", "description": "Groceries", "category": "food", "amount": 9100, "transaction_type": "debit", "currency": "INR"},
+    {"id": "T013", "date": "2026-09-12", "description": "Card payment", "category": "discretionary", "amount": 74000, "transaction_type": "debit", "currency": "INR", "merchant": "Global Travel Services"},
+    {"id": "T014", "date": "2026-09-25", "description": "Salary", "category": "income", "amount": 180000, "transaction_type": "credit", "currency": "INR"}
+  ],
+  "holdings": [
+    {"symbol": "INDTECH", "asset_class": "equity", "market_value": 620000, "cost_basis": 520000},
+    {"symbol": "INDEX50", "asset_class": "equity", "market_value": 280000, "cost_basis": 240000},
+    {"symbol": "BOND01", "asset_class": "fixed_income", "market_value": 180000, "cost_basis": 175000}
+  ],
+  "liabilities": [
+    {"name": "Home loan", "outstanding": 348000, "interest_rate": 8.2, "monthly_payment": 12000}
+  ],
+  "goals": [
+    {"name": "Home down payment", "target_amount": 1200000, "target_date": "2028-03-31", "priority": "HIGH"},
+    {"name": "Emergency reserve", "target_amount": 600000, "target_date": "2027-03-31", "priority": "HIGH"}
+  ]
+}

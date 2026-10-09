@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.env
+*.py[cod]
+logs/*.log
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+.DS_Store
+
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+frontend/tsconfig.tsbuildinfo
+frontend/.env.local
