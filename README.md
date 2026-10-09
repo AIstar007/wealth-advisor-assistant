@@ -1,97 +1,128 @@
-# Wealth Advisor Assistant
+<div align="center">
 
-An AI-powered wealth advisory workspace that combines a deterministic financial-analysis workflow with a conversational assistant, portfolio insights, and human-in-the-loop review.
+# 💼 Wealth Advisor Assistant
+
+### Multi-Agent · AG-UI Streaming · A2UI Catalog · Human-in-the-Loop
+
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-Frontend-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![CopilotKit](https://img.shields.io/badge/CopilotKit_v2-Chat_UI-6C47FF?style=for-the-badge&logo=openai&logoColor=white)](https://copilotkit.ai/)
+[![Azure OpenAI](https://img.shields.io/badge/Azure_OpenAI-LLM-0089D6?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
+[![MAF](https://img.shields.io/badge/Microsoft_Agent_Framework-Orchestration-5C2D91?style=for-the-badge&logo=microsoft&logoColor=white)](https://learn.microsoft.com/en-us/azure/ai-services/)
+[![License](https://img.shields.io/badge/License-Add_before_publishing-FF6B35?style=for-the-badge)](LICENSE)
+
+<br/>
+
+> **An AI-powered wealth advisory workspace combining a deterministic financial analysis workflow**  
+> **with a conversational assistant, portfolio insights, and human-in-the-loop review.**
+
+<br/>
+
+[🚀 Quick Start](#-quick-start) · [🏗️ Architecture](#️-architecture) · [🤖 Agent System](#-agent-system) · [🎨 A2UI Catalog](#-a2ui-catalog) · [⚙️ Configuration](#️-configuration) · [🔧 Troubleshooting](#-troubleshoot--debug)
+
+</div>
+
+---
 
 > **Project status:** The REST analysis and human-review workflow have been exercised locally. The AG-UI backend endpoint is enabled and has produced A2UI tool-call operations in a direct streaming test. End-to-end rendering of those surfaces in the CopilotKit browser chat still needs verification in the local environment.
 
-## Highlights
+---
 
-- **Financial profile workspace** — load the sample profile, edit profile JSON, or import a `.json` file.
-- **Financial overview** — metric cards for monthly income, expenses, net cash flow, cash buffer, and portfolio value.
-- **Cash-flow visualization** — compare monthly income and spending from the supplied history.
-- **Risk and insight views** — surface workflow-provided anomalies, risk level, data-quality warnings, and evidence-linked discussion points.
-- **Human-in-the-loop review** — approve or reject recommendations through explicit dashboard controls. Approval records a review decision; it does not execute trades or move money.
-- **Conversational assistant** — ask questions about the current client profile through CopilotKit and AG-UI.
-- **A2UI catalog** — custom read-only components for metric grids, insight lists, comparison bars, allocation breakdowns, trends, tables, goal progress, timelines, and callouts.
-- **Azure OpenAI integration** — the AG-UI streaming path is configured for `RUN_MODE=azure_openai` / `azure`.
+## ✨ Features
 
-## Technology
+| Feature | Description |
+|---------|-------------|
+| 📊 **Financial Profile Workspace** | Load sample profile, edit JSON, or import a `.json` file |
+| 📈 **Financial Overview** | Metric cards — monthly income, expenses, net cash flow, cash buffer, portfolio value |
+| 📉 **Cash-Flow Visualization** | Compare monthly income vs spending from supplied history |
+| ⚠️ **Risk & Insight Views** | Surface anomalies, risk level, data-quality warnings, evidence-linked discussion points |
+| 👤 **Human-in-the-Loop Review** | Approve or reject recommendations via dashboard controls — never executes trades |
+| 💬 **Conversational Assistant** | Ask questions about the client profile via CopilotKit + AG-UI |
+| 🧩 **A2UI Component Catalog** | Custom read-only components — metric grids, insight lists, charts, tables, timelines |
+| ☁️ **Azure OpenAI** | AG-UI streaming path configured for `RUN_MODE=azure_openai` |
 
-- **Frontend:** Next.js, React, TypeScript, CopilotKit v2, AG-UI client, custom A2UI catalog
-- **Backend:** Python, FastAPI, Microsoft Agent Framework, AG-UI adapter
-- **Model provider:** Azure OpenAI
-- **Analysis:** Existing Wealth Advisor service and validated domain models
-- **Review workflow:** Explicit human approval/rejection controls
+---
 
-## Architecture
+## 🏗️ Architecture
 
-```text
+```mermaid
+graph TD
+    A[👤 User - Browser] --> B[🖥️ Next.js / React Dashboard\nFinancial workspace + CopilotKit chat]
+
+    B --> C[REST API\nProfile editor · Dashboard · Review controls]
+    B --> D[/api/copilotkit runtime route]
+
+    D --> E[AG-UI Stream\nPOST /ag-ui]
+
+    E --> F[⚙️ FastAPI + Microsoft Agent Framework]
+
+    F --> G[💬 Conversational Agent\nAzure OpenAI]
+    F --> H[🧩 A2UI Generation Tool\nrender_a2ui surface operations]
+    F --> I[📊 analyze_financial_data tool]
+
+    I --> J[WealthAdvisorService\nDeterministic workflow]
+    J --> K[✅ Validated Analysis\n+ Review Payload]
+
+    K --> L{Human Review Gate}
+    L -->|Approve| M[✅ Decision Recorded]
+    L -->|Reject| N[❌ Rejection Logged]
+
+    style A fill:#e1f5fe
+    style F fill:#f3e5f5
+    style J fill:#fff3e0
+    style M fill:#e8f5e9
+    style N fill:#fce4ec
+```
+
+### System Layout
+
+```
 Browser
-  └── Next.js / React dashboard
-      ├── Financial profile editor and dashboard
-      ├── CopilotKit chat
-      ├── Custom A2UI catalog and renderers
+  └── Next.js / React Dashboard
+      ├── Financial profile editor + dashboard
+      ├── CopilotKit chat (AG-UI)
+      ├── Custom A2UI catalog + renderers
       └── /api/copilotkit runtime route
              │
              ▼
-       AG-UI stream: /ag-ui
+       AG-UI Stream → POST /ag-ui
              │
              ▼
        FastAPI + Microsoft Agent Framework
-          ├── Conversational agent
-          ├── A2UI generation tool / surface operations
+          ├── Conversational agent (Azure OpenAI)
+          ├── A2UI generation tool / surface ops
           └── analyze_financial_data tool
                     │
                     ▼
-           WealthAdvisorService
+           WealthAdvisorService (deterministic)
                     │
                     ▼
-        Validated analysis and review payload
+        Validated analysis + review payload
 ```
 
-The REST analysis flow remains the canonical application interface. The AG-UI endpoint provides a separate streaming interface for the conversational experience and exposes analysis results as shared agent state.
+> The **REST analysis flow** is the canonical application interface. The **AG-UI endpoint** provides a separate streaming interface for the conversational experience and exposes analysis results as shared agent state.
 
-## Repository layout
+---
 
-The core files discussed during development are expected to follow this structure:
+## 🚀 Quick Start
 
-```text
-wealthproj/
-├── app/
-│   ├── agui_integration.py      # AG-UI/A2UI bridge and agent setup
-│   ├── config.py                # Backend settings
-│   ├── models/                  # Validated domain models
-│   └── services/                # Wealth advisor workflow/service
-├── frontend/
-│   ├── src/app/                 # Next.js app, API routes, providers
-│   └── src/lib/
-│       ├── a2ui-catalog.tsx     # Custom A2UI definitions and renderers
-│       └── sample-financial-data.*
-├── requirements.txt
-└── README.md
+### Prerequisites
+
+```yaml
+Python:    version compatible with requirements.txt
+Node.js:   version pinned by the frontend project
+Azure:     OpenAI deployment + endpoint + API credentials
 ```
 
-Your local repository may contain additional modules or different filenames; retain the existing service and settings structure when applying integration changes.
-
-## Prerequisites
-
-- Python version compatible with the project's `requirements.txt`
-- Node.js and npm compatible with the versions pinned by the frontend project
-- An Azure OpenAI deployment and its endpoint/API credentials
-- Windows PowerShell commands below assume the repository is at `D:\wealth-advisor-copilotkit-agui-a2ui\wealthproj`; adjust paths for your machine
-
-## Setup
-
-### 1. Clone the repository
+### 1 · Clone
 
 ```powershell
 git clone <YOUR_GITHUB_REPOSITORY_URL>
 cd wealthproj
 ```
 
-Replace `<YOUR_GITHUB_REPOSITORY_URL>` with your repository URL. If you are already working in the project directory, skip cloning.
-
-### 2. Create and activate the Python environment
+### 2 · Create & activate Python environment
 
 ```powershell
 py -m venv .venv
@@ -100,43 +131,19 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If PowerShell blocks activation for the current terminal, use this temporary process-scoped setting and activate again:
+> If PowerShell blocks activation:
+> ```powershell
+> Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+> .\.venv\Scripts\Activate.ps1
+> ```
 
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-.\.venv\Scripts\Activate.ps1
-```
-
-### 3. Configure backend environment variables
-
-Create or update the backend `.env` file using the variable names expected by `app/config.py`. The Azure OpenAI settings used by the integration correspond to these fields:
-
-```dotenv
-RUN_MODE=azure_openai
-AZURE_OPENAI_DEPLOYMENT=<your-deployment-name>
-AZURE_OPENAI_API_KEY=<your-api-key>
-AZURE_OPENAI_ENDPOINT=https://<your-resource-name>.openai.azure.com/
-AZURE_OPENAI_API_VERSION=<your-supported-api-version>
-
-# Optional if your configuration uses a custom base URL
-# AZURE_OPENAI_BASE_URL=<your-base-url>
-```
-
-These are illustrative values, not real credentials. Confirm the exact environment-variable aliases and required fields in `app/config.py`; do not add duplicate variables if the project already defines them differently.
-
-**Security:** Never commit `.env`, `.env.local`, access tokens, API keys, client data, or financial profiles containing private information. If a real key was ever shared in chat, logs, or a public repository, revoke/rotate it and replace it in your local environment.
-
-### 4. Start the backend
-
-Use the startup command already defined by your project. If the FastAPI entry point is `app.main:app`, the command is commonly:
+### 3 · Start the backend
 
 ```powershell
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-If your application uses another entry point, keep that existing command instead.
-
-Check the health endpoint exposed by your app. A healthy response from the current local setup looked like:
+Verify the health endpoint:
 
 ```json
 {
@@ -147,24 +154,22 @@ Check the health endpoint exposed by your app. A healthy response from the curre
 }
 ```
 
-The exact fields depend on your implementation. Confirm that `ag_ui_enabled` is `true` and that the backend logs report registration of `/ag-ui`.
+> Confirm `ag_ui_enabled: true` and that the backend logs report registration of `/ag-ui`.
 
-### 5. Configure and start the frontend
-
-In a second terminal:
+### 4 · Configure and start the frontend
 
 ```powershell
 cd frontend
 npm install
 ```
 
-Create or update `frontend/.env.local`:
+Create `frontend/.env.local`:
 
 ```dotenv
 AGENT_URL=http://127.0.0.1:8000/ag-ui
 ```
 
-Then run:
+Then:
 
 ```powershell
 npm run typecheck
@@ -172,43 +177,76 @@ npm run build
 npm run dev
 ```
 
-Open the local URL printed by Next.js. If port `3000` is already occupied, Next.js may choose `3001` or another available port.
+Open the local URL printed by Next.js (`http://localhost:3000` or next available port).
 
-## Using the workspace
+---
 
-1. Load the sample financial profile or import your own JSON profile.
-2. Review the displayed currency and profile fields.
-3. Choose **Analyze profile** to run the deterministic workflow.
-4. Review the analysis summary, financial metrics, anomalies, and recommendations.
-5. When the workflow returns `pending_review`, use the explicit dashboard controls to approve or reject the review request.
-6. Ask the Wealth Advisor chat questions about the loaded profile.
-7. For a visualization request, ask for a metric grid, chart, comparison, allocation breakdown, table, goal progress view, or timeline.
+## ⚙️ Configuration
 
-Use only data you are authorized to process. Financial outputs are decision support, not personalized investment instructions. Verify figures and assumptions before taking client-facing action.
+### Backend `.env`
 
-## A2UI components
+```dotenv
+RUN_MODE=azure_openai
+AZURE_OPENAI_DEPLOYMENT=<your-deployment-name>
+AZURE_OPENAI_API_KEY=<your-api-key>
+AZURE_OPENAI_ENDPOINT=https://<your-resource-name>.openai.azure.com/
+AZURE_OPENAI_API_VERSION=<your-supported-api-version>
 
-The custom catalog in `frontend/src/lib/a2ui-catalog.tsx` defines read-only component types including:
+# Optional — custom base URL
+# AZURE_OPENAI_BASE_URL=<your-base-url>
+```
 
-- `WealthMetric` and `WealthMetricGrid`
-- `WealthInsightList`
-- `WealthComparisonBars` and `WealthBreakdown`
-- `WealthTrendLine` and `WealthMultiSeriesTrend`
-- `WealthDataTable`
-- `WealthProgressList` and `WealthTimeline`
-- `WealthCallout`
+> ⚠️ **Security:** Never commit `.env`, `.env.local`, API keys, access tokens, client data, or financial profiles containing private information. If a real key was ever shared in chat or a public repository, revoke/rotate it immediately.
 
-The catalog uses the ID `wealth-advisor-catalog` and includes the basic A2UI catalog. The backend's configured catalog ID must match it exactly. A2UI output is useful only when the agent emits the surface, the runtime forwards/processes the A2UI operations, and the frontend renderer has compatible catalog definitions.
+---
 
-## Test and troubleshoot
+## 🧩 A2UI Catalog
+
+Custom read-only components defined in `frontend/src/lib/a2ui-catalog.tsx`:
+
+| Component | Description |
+|-----------|-------------|
+| `WealthMetric` / `WealthMetricGrid` | KPI cards — income, expenses, portfolio value |
+| `WealthInsightList` | Anomalies, risk flags, evidence-linked insights |
+| `WealthComparisonBars` | Side-by-side income vs spending bars |
+| `WealthBreakdown` | Allocation breakdown by category |
+| `WealthTrendLine` / `WealthMultiSeriesTrend` | Single and multi-series trend lines |
+| `WealthDataTable` | Tabular financial data |
+| `WealthProgressList` | Goal progress indicators |
+| `WealthTimeline` | Event timeline |
+| `WealthCallout` | Highlighted alerts and callouts |
+
+> Catalog ID: `wealth-advisor-catalog` — must match exactly on both frontend and backend.
+
+---
+
+## 🖥️ Using the Workspace
+
+```
+1.  Load the sample financial profile or import your own JSON
+2.  Review displayed currency and profile fields
+3.  Click Analyze profile → runs the deterministic workflow
+4.  Review analysis summary, metrics, anomalies, and recommendations
+5.  When workflow returns pending_review → use dashboard controls to approve or reject
+6.  Ask the chat questions about the loaded profile
+7.  Request a visualization — metric grid, chart, comparison, table, goal progress, or timeline
+```
+
+> ⚠️ Financial outputs are **decision support only** — not personalized investment instructions. Verify figures before any client-facing action. Use only data you are authorized to process.
+
+---
+
+## 🔧 Troubleshoot & Debug
 
 ### Verify backend health
 
-Confirm the health endpoint returns successfully and `ag_ui_enabled` is `true`.
+```bash
+curl http://127.0.0.1:8000/health
+```
+
+Confirm `ag_ui_enabled: true`.
 
 ### Test the AG-UI stream directly
-
-This test checks whether the backend emits tool calls and surface operations. It does **not** verify that the browser renders them, because it bypasses the Next.js/CopilotKit runtime route.
 
 ```powershell
 $body = '{"messages":[{"role":"user","content":"Create a simple A2UI surface with a metric card labeled Connectivity Test and value 1. Call the render_a2ui tool instead of describing the card in text."}]}'
@@ -219,49 +257,95 @@ curl.exe -N -i http://127.0.0.1:8000/ag-ui `
   --data-binary $body
 ```
 
-In the previously tested setup, this returned HTTP 200 and the stream contained calls to `generate_a2ui` and `render_a2ui`, followed by A2UI operations for the connectivity test surface. That confirms backend generation on that test, but not frontend rendering.
+> Confirms backend `generate_a2ui` + `render_a2ui` calls — but not frontend rendering (bypasses CopilotKit runtime).
 
 ### If chat displays only text
 
-1. Use the chat inside the running Next.js application, not the direct `curl` request.
-2. In browser DevTools, open **Network** and inspect `/api/copilotkit/agent/wealthAdvisor/run`.
-3. Check the Python logs for `render_a2ui` calls and the browser request/response for A2UI surface activity or event-processing errors.
-4. Confirm `frontend/src/app/api/copilotkit/[[...slug]]/route.ts` routes `wealthAdvisor` to `http://127.0.0.1:8000/ag-ui` (or the `AGENT_URL` value) and configures A2UI processing for that agent.
-5. Confirm `frontend/src/app/providers.tsx` uses the installed CopilotKit v2 provider and passes `wealthAdvisorCatalog` to its A2UI configuration.
-6. Confirm the catalog ID is exactly `wealth-advisor-catalog` on both sides.
-7. Check installed package versions when APIs/types disagree:
+| Check | What to look for |
+|-------|-----------------|
+| Browser DevTools → Network | Inspect `/api/copilotkit/agent/wealthAdvisor/run` for A2UI events |
+| Python logs | Look for `render_a2ui` calls |
+| `route.ts` | Confirm it routes `wealthAdvisor` → `AGENT_URL` with A2UI processing |
+| `providers.tsx` | Confirm CopilotKit v2 provider + `wealthAdvisorCatalog` passed to A2UI config |
+| Catalog ID | Must be exactly `wealth-advisor-catalog` on both sides |
+| Package versions | Run `npm ls @copilotkit/react-core @copilotkit/runtime @copilotkit/a2ui-renderer @ag-ui/client` |
+| After changes | Run `npm run typecheck && npm run build` |
 
-   ```powershell
-   npm ls @copilotkit/react-core @copilotkit/runtime @copilotkit/a2ui-renderer @copilotkitnext/react @ag-ui/client
-   ```
+### Fallback if A2UI event rendering remains incompatible
 
-8. Run `npm run typecheck` and `npm run build` after changes. Avoid mixing examples from `@copilotkitnext/react` and `@copilotkit/react-core/v2`; use documentation matching the actual installed versions.
+A typed visualization tool that returns a validated display model (`metric_grid`, `comparison_bars`, `line_chart`, `data_table`) with a React renderer mapping those types to existing components. Preserves the conversational agent and deterministic financial service — avoids dependence on A2UI event translation. All numeric values must be validated against the current profile or analysis result.
 
-### Alternative if A2UI event rendering remains incompatible
+---
 
-A practical fallback is a typed visualization tool that returns a validated display model (for example, a `metric_grid`, `comparison_bars`, `line_chart`, or `data_table`) and a frontend React renderer that maps those types to existing components. This preserves the conversational agent and deterministic financial service while avoiding dependence on A2UI event translation. Validate all numeric values against the current profile or analysis result; do not let the model invent financial figures.
+## 📡 API Endpoints
 
-## API overview
+| Method | Endpoint | Description |
+|:------:|----------|-------------|
+| `GET` | `/health` | Local application health + configuration status |
+| `POST` | `/ag-ui` | AG-UI streaming endpoint — used by CopilotKit runtime |
+| `POST` | `/api/wealth/analyze` | Start financial analysis workflow |
+| `POST` | `/api/wealth/runs/{run_id}/review` | Submit human-review decision (approve / reject) |
 
-The following endpoints are referenced by the frontend and backend integration; confirm the exact route definitions in your local application:
+> `/api/wealth/...` paths may be Next.js proxy routes rather than direct FastAPI endpoints.
 
-| Endpoint | Purpose |
-|---|---|
-| `GET /health` | Local application health/configuration status, if enabled |
-| `POST /ag-ui` | AG-UI streaming endpoint used by the CopilotKit runtime |
-| `POST /api/wealth/analyze` | Frontend-facing route used to start financial analysis |
-| `POST /api/wealth/runs/{run_id}/review` | Frontend-facing route used to submit the human-review decision |
+---
 
-The `/api/wealth/...` paths may be Next.js proxy routes rather than direct FastAPI endpoints in your setup.
+## 📂 Project Structure
 
-## Development principles
+```
+wealthproj/
+│
+├── 📁 app/
+│   ├── agui_integration.py       # AG-UI / A2UI bridge + agent setup
+│   ├── config.py                 # Backend settings + env vars
+│   ├── 📁 models/                # Validated domain models
+│   └── 📁 services/              # Wealth advisor workflow + service logic
+│
+├── 📁 frontend/
+│   ├── 📁 src/app/               # Next.js app, API routes, providers
+│   └── 📁 src/lib/
+│       ├── a2ui-catalog.tsx      # Custom A2UI component definitions + renderers
+│       └── sample-financial-data.*
+│
+├── requirements.txt
+└── README.md
+```
 
-- Keep calculations and validation in the deterministic backend workflow where possible.
-- Treat the supplied client profile and workflow result as the source of truth.
-- Preserve currency codes. Do not combine different currencies without an explicitly supplied exchange rate.
-- Keep A2UI components read-only; approval/rejection remains in the application-owned review workflow.
-- Never place secrets or real client data in committed examples, screenshots, tests, or logs.
+---
 
-## License
+## 🎨 Development Principles
 
-Add the license you intend to use before publishing the repository. Until a license is added, do not assume others have permission to reuse the project.
+| Principle | Detail |
+|-----------|--------|
+| **Deterministic first** | Keep calculations and validation in the backend workflow |
+| **Source of truth** | Supplied client profile + workflow result — never LLM-invented figures |
+| **Currency integrity** | Preserve currency codes — never combine without an explicit exchange rate |
+| **Read-only A2UI** | Components are display-only — approval/rejection stays in the review workflow |
+| **No secrets in code** | Never commit credentials, real client data, or private financial profiles |
+
+---
+
+## 🧱 Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | [Next.js](https://nextjs.org/) + React + TypeScript |
+| Chat UI | [CopilotKit v2](https://copilotkit.ai/) + AG-UI client |
+| A2UI | Custom catalog — `wealth-advisor-catalog` |
+| Backend | [FastAPI](https://fastapi.tiangolo.com/) + Python |
+| Agent Orchestration | Microsoft Agent Framework |
+| Streaming | AG-UI adapter — `/ag-ui` endpoint |
+| LLM | [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) |
+| Financial Analysis | WealthAdvisorService — deterministic domain workflow |
+
+---
+
+<div align="center">
+
+Built with ❤️ by **Alen Thomas**
+
+[![GitHub](https://img.shields.io/badge/GitHub-AIstar007-black?style=for-the-badge&logo=github)](https://github.com/AIstar007)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Alen_Thomas-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/alen-thomas-3558bb187)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-6C47FF?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-website-alpha-nine-69.vercel.app/)
+
+</div>
