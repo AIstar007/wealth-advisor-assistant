@@ -12,7 +12,7 @@ import {
  */
 const agentUrl =
   process.env.AGENT_URL?.trim() ||
-  "http://127.0.0.1:8000/ag-ui";
+  "https://wealth-advisor-assistant-backend.onrender.com/ag-ui";
 
 const wealthAdvisorAgent = new HttpAgent({
   url: agentUrl,
